@@ -1,13 +1,26 @@
 const express = require('express');
 const path = require('path');
-
 const app = express();
-const port = 3000;
+const port = 3001;
 
-// Middleware to serve static files
+let clickCount = 0;
+
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Start the server
+// Default route to serve profile.html at root URL
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'profile.html'));
+});
+
+app.get('/click-count', (req, res) => {
+    res.json({ count: clickCount });
+});
+
+app.post('/click-count', (req, res) => {
+    clickCount++;
+    res.json({ count: clickCount });
+});
+
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+    console.log(`Server is running on http://localhost:${port}`);
 });
