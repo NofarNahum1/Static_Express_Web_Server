@@ -6,6 +6,16 @@ h1 {
     color: #333;
 }
 
+/* Reduce margin and padding for <h2> */
+h2 {
+    margin-bottom: 0.3em; /* Adjust as needed */
+}
+
+/* Remove or reduce top margin for <p> */
+p {
+    margin-top: 0.2em; /* Adjust as needed */
+}
+
 button {
     margin: 5px;
     padding: 10px 20px;
