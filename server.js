@@ -24,3 +24,7 @@ app.post('/click-count', (req, res) => {
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
+
+
+// run by: node server.js
+// the website will show at: http://localhost:3001
