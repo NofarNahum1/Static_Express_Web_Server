@@ -21,6 +21,17 @@ h1 {
     margin: 20px 0 10px; /* Adjust top and bottom margin */
 }
 
+/* Animation styles */
+.spin-on-hover {
+    font-size: 60px;
+    /* display: inline-block; Ensure the h1 behaves as an inline block for animation */
+    transition: transform 0.5s; /* Smooth transition for the spin effect */
+}
+
+.spin-on-hover:hover {
+    transform: rotate(5deg); /* Spin effect on hover */
+}
+
 section {
     /* margin: 20px;
     padding: 20px;
@@ -52,10 +63,13 @@ button {
     margin: 5px;
     padding: 10px 25px;
     font-size: 16px;
+    transition: transform 0.3s, opacity 0.3s;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
 button:hover {
     background-color: #0056b3;
+    transform: scale(1.05);
 }
 
 a {
@@ -91,4 +105,14 @@ img:hover {
     background-color: #25262a;
     border-radius: 10px;
     box-shadow: 2px 2px 15px rgba(232, 222, 222, 0.3);
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.chat section:hover {
+    transform: scale(1.05);
+}
+
+.chat section p {
+    font-size: 1.1em;
+    margin: 3px 0;
 }
